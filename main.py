@@ -20,7 +20,7 @@ while video.isOpened():
     face = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5)
 
     for x, y, w, h in face:
-        image = cv2.rectangle(frame, (x, y), (x + w, y + h), (89, 2, 236), 1)
+        
         try:
             analyze = DeepFace.analyze(frame, actions=['emotion']) # Call deepface library
         
